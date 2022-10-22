@@ -28,8 +28,6 @@ public class Text implements TSPLCommand {
             throw new LabelParserException("TEXT: x and y positions are required");
         }
 
-        //TODO: check for font
-
         if (xMultiplicationFactor != null && (xMultiplicationFactor <= 0
                 || xMultiplicationFactor > 10)) {
             throw new LabelParserException("TEXT: Available xMultiplication factors: 1~10");
@@ -54,8 +52,6 @@ public class Text implements TSPLCommand {
         if (rotation != null) {
             commandBuilder.append(rotation.getRotation()).append(COMMA);
         }
-
-        // For "ROMAN.TTF" true type font, xMultiplicationFactor parameter is ignored.
 
         if (!hasFloatDecimals(xMultiplicationFactor)) {
             commandBuilder.append(xMultiplicationFactor.intValue());
