@@ -3,6 +3,10 @@ package uz.driver.commands.label;
 import lombok.Builder;
 import lombok.Data;
 import uz.driver.commands.TSPLCommand;
+import uz.driver.exceptions.LabelParserException;
+
+import static uz.driver.DriverConstant.*;
+import static uz.driver.commands.label.TSPLLabelUtils.hasFloatDecimals;
 
 @Data
 @Builder
@@ -59,6 +63,4 @@ public class CodaBlockF implements TSPLCommand {
 
         return commandBuilder.toString();
     }
-}
-
 }
