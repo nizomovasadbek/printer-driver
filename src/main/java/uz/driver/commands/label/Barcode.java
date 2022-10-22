@@ -13,6 +13,10 @@ public class Barcode implements TSPLCommand {
     private Integer height;
     private BarcodeType codeType;
     private BarcodeHRCAlignment hrcAlignment;
+    private BarcodeRotation rotation;
+    private Integer narrow;
+    private Integer wide;
+    private BarcodeAlignment alignment;
 
     @Override
     public String getCommand() {
