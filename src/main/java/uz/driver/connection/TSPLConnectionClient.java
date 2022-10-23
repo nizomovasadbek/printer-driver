@@ -1,6 +1,8 @@
 package uz.driver.connection;
 
 import uz.driver.commands.label.TSPLLabel;
+import uz.driver.listeners.ClientListener;
+import uz.driver.listeners.DataListener;
 
 public interface TSPLConnectionClient {
 
