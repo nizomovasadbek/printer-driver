@@ -192,7 +192,7 @@ public class USBConnectionClient extends AbstractConnectionClient implements TSP
         localReadPipe.addUsbPipeListener(new UsbPipeListener() {
             @Override
             public void errorEventOccurred(UsbPipeErrorEvent usbPipeErrorEvent) {
-
+                System.err.println(usbPipeErrorEvent.getUsbException().getMessage());
             }
 
             @Override
